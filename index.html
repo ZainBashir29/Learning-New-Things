@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+
+    <title>Charts Using Chart.js</title>
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="myChart"></canvas>
+    </div>
+
+</body>
+
+<script>
+    let myChart = document.getElementById("myChart").getContext("2d");
+    const massPopChart = new Chart(myChart, {
+        type: "bar",
+        data: {
+            labels: ["Lahore", "Faisalabad", "Rawalpindi", "Gujranwala", "Multan"],
+            datasets: [
+                {
+                    label: "Population",
+                    data: [1100000, 320000, 210000, 200000, 180000],
+
+                }
+            ],
+        },
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: "Populated Cities of Punjab (High to Low)",
+                    font: {
+                        size: 40,
+                    },
+                }
+            }
+        },
+    })
+</script>
+
+</html>
