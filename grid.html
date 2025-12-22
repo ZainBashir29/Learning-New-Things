@@ -14,12 +14,13 @@
 
     .grid-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: [pehla]1fr [doosra]1fr [teesra]1fr [chota]1fr;
         grid-template-rows: 100px 200px;
     }
 
     .item1 {
-        grid-column: 1/3;
+        grid-column: pehla/chota;
+        grid-row: pehla/teesra;
     }
 
     .item2 {
