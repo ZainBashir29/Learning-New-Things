@@ -7,15 +7,20 @@
     <title>Grid in CSS</title>
 </head>
 <style>
+    body {
+        background-color: #212121;
+    }
+
     .item {
-        background-color: cadetblue;
-        border: 1px solid brown;
+        background-color: purple;
+        border: 1px solid white;
     }
 
     .grid-container {
         display: grid;
         grid-template-columns: [pehla]1fr [doosra]1fr [teesra]1fr [chota]1fr;
         grid-template-rows: 100px 200px;
+        margin: 10px;
     }
 
     .item1 {
