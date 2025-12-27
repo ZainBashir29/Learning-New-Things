@@ -7,16 +7,63 @@
     <title>CSS Variables</title>
 </head>
 <style>
-    :root {
+    /* :root {
         --body-background: #212121;
     }
 
     body {
         background-color: var(--body-background);
+    } */
+
+    :root {
+        --color: rgb(255, 0, 247);
+        --seccolor: rgb(231, 164, 246);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav {
+        background-color: var(--color);
+    }
+
+    ul {
+        display: flex;
+    }
+
+    ul li {
+        list-style: none;
+        padding: 34px;
+        border: 2px solid var(--seccolor)
+    }
+
+    ul li:first-child {
+        --color: rgb(243, 87, 8);
+        background-color: var(--color, blue);
+    }
+
+    .container {
+        background-color: var(--seccolor);
     }
 </style>
 
 <body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eveniet quibusdam amet eius? Impedit assumenda
+        accusamus quas veritatis, dolorem porro. Mollitia ipsam voluptas maiores expedita ratione illo harum, a eum unde
+        eaque perspiciatis consectetur beatae porro facilis ut? Totam expedita eum dolore perspiciatis quisquam.
+        Recusandae.
+    </div>
 </body>
 
 </html>
