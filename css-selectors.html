@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+</head>
+<style>
+    .box:first-child {
+        background-color: aqua;
+    }
+
+    .boxes::before {
+        content: "Zain is the man";
+    }
+
+    .boxes::after {
+        content: "Zain is still the man";
+    }
+
+    [data-color="primary"] {
+        color: blueviolet;
+    }
+
+    .boxes * {
+        margin-bottom: 5px;
+        border: 2px solid black;
+        border-collapse: collapse;
+    }
+
+    .box:nth-child(even) {
+        color: burlywood;
+    }
+
+    ::selection {
+        color: aqua;
+        background-color: black;
+    }
+
+    input::placeholder {
+        color: darkcyan;
+    }
+</style>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+        <input type="text" placeholder="Type your name here" />
+    </div>
+</body>
+
+</html>
