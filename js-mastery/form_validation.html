@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms - Validation and Accessibility</title>
+</head>
+
+<body>
+    <form id="signup-form" novalidate>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required aria-describedby="email-error" />
+            <span id="email-error" role="alert" aria-live="polite"></span>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" minlength="8" required
+                aria-describedby="password-error" />
+            <span id="password-error" role="alert" aria-live="polite"></span>
+        </div>
+        <button type="submit">Sign up</button>
+    </form>
+</body>
+<script src="form_validation.js"></script>
+
+</html>
