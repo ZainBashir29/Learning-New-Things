@@ -41,3 +41,10 @@ const showError = (input) => {
     input.setAttribute("aria-invalid", true);
   }
 };
+
+const passwordInput = document.getElementById("password");
+if (passwordInput.length < 6) {
+  const passErrorSpan = form.querySelector("#password-error");
+  passErrorSpan.textContent =
+    "Password should be equal to 6 or more characters";
+}
