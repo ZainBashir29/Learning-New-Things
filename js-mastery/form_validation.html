@@ -6,6 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forms - Validation and Accessibility</title>
 </head>
+<style>
+    /* Basic Reset & Layout */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f7f6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    #signup-form {
+        background: #ffffff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Form Groups */
+    div {
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+
+    /* Input Styling */
+    input {
+        padding: 0.75rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+        transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    input:focus {
+        outline: none;
+        border-color: #4a90e2;
+        box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+    }
+
+    /* Validation Message Styling */
+    span[role="alert"] {
+        font-size: 0.85rem;
+        color: #d9534f;
+        /* Soft red for errors */
+        margin-top: 0.25rem;
+        min-height: 1.2rem;
+        /* Prevents layout jump when text appears */
+    }
+
+    /* Button Styling */
+    button {
+        width: 100%;
+        padding: 0.75rem;
+        background-color: #4a90e2;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    button:hover {
+        background-color: #357abd;
+    }
+
+    button:active {
+        transform: translateY(1px);
+    }
+</style>
 
 <body>
     <form id="signup-form" novalidate>
