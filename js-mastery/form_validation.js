@@ -75,3 +75,18 @@ const showError = (input) => {
 //   passErrorSpan.textContent =
 //     "Password should be equal to 6 or more characters";
 // }
+
+/*
+const passwordStrengthSpan = document.getElementById("password-strength");
+const password = document.getElementById("password");
+password.addEventListener("input", () => {
+  const val = e.target.value;
+  if (val.length < 6) {
+    passwordStrengthSpan.textContent = "Weak";
+  } else if (/[A-Z]/.test(val) && /\d/.test(val)) {
+    passwordStrengthSpan.textContent = "Strong";
+  } else {
+    passwordStrengthSpan.textContent = "Average+";
+  }
+});
+*/
