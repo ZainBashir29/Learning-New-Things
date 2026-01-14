@@ -39,10 +39,27 @@ async function fetchWithRetry(
       }
 
       await new Promise((res) =>
-        setTimeout(res, backoff * Math.pow(2, attempt))
+        setTimeout(res, backoff * Math.pow(2, attempt - 1))
       );
     } finally {
       clearTimeout(id);
     }
   }
 }
+
+const response = await fetchWithTimeout(
+  "https://api.github.com/users/hiteshchoudhary",
+  {},
+  5000
+);
+const res = await response.json();
+console.log(res);
+
+const response2 = await fetchWithRetry(
+  "https://api.github.com/users/react",
+  {},
+  3,
+  5000
+);
+const res2 = await response2.json();
+console.log(res2);
